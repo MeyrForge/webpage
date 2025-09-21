@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background: #000000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,10 +24,24 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: 
+    radial-gradient(1px 1px at 12px 15px, #7b3fe4, transparent),
+    radial-gradient(2px 2px at 67px 42px, rgba(123, 63, 228, 0.6), transparent),
+    radial-gradient(1px 1px at 134px 73px, #bdaaff, transparent),
+    radial-gradient(1px 1px at 23px 89px, rgba(189, 170, 255, 0.4), transparent),
+    radial-gradient(2px 2px at 178px 31px, rgba(123, 63, 228, 0.3), transparent),
+    radial-gradient(1px 1px at 89px 14px, rgba(189, 170, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 156px 67px, #7b3fe4, transparent),
+    radial-gradient(2px 2px at 34px 56px, rgba(123, 63, 228, 0.2), transparent),
+    radial-gradient(1px 1px at 112px 91px, rgba(189, 170, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 198px 18px, #bdaaff, transparent),
+    radial-gradient(2px 2px at 45px 28px, rgba(123, 63, 228, 0.4), transparent),
+    radial-gradient(1px 1px at 167px 84px, rgba(189, 170, 255, 0.3), transparent),
+    #000000;
+  background-repeat: repeat;
+  background-size: 220px 110px;
 }
 
 h1 {
