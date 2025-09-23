@@ -5,6 +5,9 @@
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   box-shadow: 0 2px 16px rgba(123, 63, 228, 0.08);
   overflow: hidden;
   position: relative;
@@ -25,6 +28,8 @@
   display: flex;
   align-items: center;
   position: relative;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .logo-section {
@@ -71,4 +76,72 @@
 
 .nav-section a:hover::after {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0;
+  }
+  
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .logo {
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+  
+  .nav-section {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .nav-section a {
+    font-size: 1.1rem;
+  }
+  
+  .language-section-top {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    padding: 0;
+  }
+  
+  .header-container {
+    padding: 0.8rem 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    height: 100px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .nav-section {
+    gap: 0.8rem;
+  }
+  
+  .nav-section a {
+    font-size: 0.9rem;
+  }
+  
+  .language-section-top {
+    top: 5px;
+    right: 10px;
+    font-size: 0.7rem;
+  }
 }

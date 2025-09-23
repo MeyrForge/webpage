@@ -4,6 +4,18 @@ main {
   margin: 0;
   padding: 0;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .projects,
 .hero,
 .about,
@@ -13,4 +25,29 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .projects,
+  .hero,
+  .about,
+  .contact {
+    min-height: auto;
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .projects,
+  .hero,
+  .about,
+  .contact {
+    margin: 0.5rem auto;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
 }

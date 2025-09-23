@@ -63,3 +63,62 @@
   color: #fff;
   font-size: 1rem;
 }
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 1rem 1rem;
+    width: 85%;
+  }
+  
+  .project-grid {
+    flex-direction: column;
+    padding: 0;
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .projects h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .projects {
+    padding: 1rem 0.5rem;
+    width: 100%;
+    margin: 0.5rem auto;
+    box-sizing: border-box;
+  }
+  
+  .projects h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-card {
+    padding: 0.8rem 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  .project-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .project-card p {
+    font-size: 0.85rem;
+  }
+  
+  .image-placeholder {
+    height: 80px;
+  }
+  
+  .project-grid {
+    gap: 0.8rem;
+  }
+}
