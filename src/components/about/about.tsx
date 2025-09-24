@@ -4,16 +4,10 @@ export default function About() {
   return (
     <section className="about" id="about">
       <h2>Sobre nosotros</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim nec
-        sociis, eleifend malesuada non rutrum praesent commodo taciti natoque
-        dapibus, facilisis enim phasellus gravida congue vestibulum leo sagittis
-        habitant. Cras commodo congue nam nisi nisl etiam, donec elementum orci
-        iaculis molestie, proin lacus ligula vestibulum eleifend. Magna tortor
-        taciti arcu libero sodales nisl dignissim, vehicula proin eu eget id
-        justo maecenas dis, porta posuere bibendum rutrum massa enim hac,
-        habitant commodo nisi accumsan duis lobortis.
-      </p>
+      <p>💻 Somos dos devs mobile que salimos de la UNLaM con el título en mano y muchas ganas de codear el mundo.</p>
+      <p>🚀 Amamos la tecnología, los dados de 20 caras y todo lo que tenga olor a innovación.</p>
+      <p>👾 Cuando no estamos trabajando en IT, nos juntamos a crear proyectos propios que nos diviertan y que, de paso, hagan la vida un poco más fácil.</p>
+      <p>✨ Este portafolio es nuestro laboratorio de ideas, donde mezclamos código, creatividad y café hasta sacar cosas que nos enorgullecen.</p>
     </section>
   );
 }
