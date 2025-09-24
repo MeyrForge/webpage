@@ -1,25 +1,44 @@
 import "./projects.css";
+import ProjectCard from "./card";
+import tomaBien from "../../assets/tomabien.png";
 
 export default function Projects() {
+  const projects = [
+    {
+      id: 1,
+      title: "Toma Bien",
+      description: "Seguimiento de Toma de Medicacion",
+      imageUrl: tomaBien,
+      link: "https://github.com/MeyrForge/tomabien"
+    },
+    {
+      id: 2,
+      title: "Próximamente", 
+      description: "",
+      comingSoon: true
+    },
+    {
+      id: 3,
+      title: "Próximamente",
+      description: "",
+      comingSoon: true
+    }
+  ];
+
   return (
     <section className="projects" id="projects">
       <h2>Nuestros Proyectos</h2>
       <div className="project-grid">
-        <div className="project-card">
-          <div className="image-placeholder"></div>
-          <h3>Proyecto 1</h3>
-          <p>Descripción breve del proyecto 1.</p>
-        </div>
-        <div className="project-card">
-          <div className="image-placeholder"></div>
-          <h3>Proyecto 2</h3>
-          <p>Descripción breve del proyecto 2.</p>
-        </div>
-        <div className="project-card">
-          <div className="image-placeholder"></div>
-          <h3>Proyecto 3</h3>
-          <p>Descripción breve del proyecto 3.</p>
-        </div>
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            imageUrl={project.imageUrl}
+            comingSoon={project.comingSoon}
+            link={project.link}
+          />
+        ))}
       </div>
     </section>
   );
