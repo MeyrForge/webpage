@@ -1,27 +1,31 @@
 import "./projects.css";
 import ProjectCard from "./card";
 import tomaBien from "../../assets/tomabien.png";
+import polarSync from "../../assets/polarsync.png";
+import bagOfHolding from "../../assets/bagofholding.png";
 
 export default function Projects() {
   const projects = [
     {
       id: 1,
       title: "Toma Bien",
-      description: "Seguimiento de Toma de Medicacion",
+      description: "Tu medicación, siempre a tiempo",
       imageUrl: tomaBien,
       link: "https://github.com/MeyrForge/tomabien"
     },
     {
       id: 2,
-      title: "Próximamente", 
-      description: "",
-      comingSoon: true
+      title: "Polar Sync",
+      description: "Monitorea, comprende, avanza",
+      imageUrl: polarSync,
+      link: ""
     },
     {
       id: 3,
-      title: "Próximamente",
-      description: "",
-      comingSoon: true
+      title: "Bag of Holding - DM's Vault",
+      description: "Porque hasta el DM necesita su inventario",
+      imageUrl: bagOfHolding,
+      link: ""
     }
   ];
 
@@ -35,7 +39,6 @@ export default function Projects() {
             title={project.title}
             description={project.description}
             imageUrl={project.imageUrl}
-            comingSoon={project.comingSoon}
             link={project.link}
           />
         ))}

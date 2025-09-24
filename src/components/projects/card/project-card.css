@@ -20,7 +20,7 @@
 }
 
 .image-placeholder {
-  background: #bdaaff;
+  background: transparent;
   height: 150px;
   width: 150px;
   border-radius: 8px;

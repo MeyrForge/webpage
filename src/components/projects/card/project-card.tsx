@@ -1,12 +1,10 @@
 import "./project-card.css";
-import ComingSoonImage from "./coming-soon-image";
 
 interface ProjectCardProps {
   title: string;
   description: string;
-  imageUrl?: string;
+  imageUrl: string;
   imageAlt?: string;
-  comingSoon?: boolean;
   link?: string;
 }
 
@@ -15,12 +13,9 @@ export default function ProjectCard({
   description, 
   imageUrl, 
   imageAlt = title,
-  comingSoon = false,
   link
 }: ProjectCardProps) {
-  const imageContent = comingSoon ? (
-    <ComingSoonImage />
-  ) : imageUrl ? (
+  const imageContent = imageUrl ? (
     <img 
       src={imageUrl} 
       alt={imageAlt} 
@@ -28,7 +23,6 @@ export default function ProjectCard({
         width: '100%', 
         height: '100%', 
         objectFit: 'cover', 
-        borderRadius: '8px',
         display: 'block'
       }}
     />
