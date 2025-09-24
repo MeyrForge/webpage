@@ -1,8 +1,8 @@
 import "./projects.css";
 import ProjectCard from "./card";
-import tomaBien from "../../assets/tomabien.png";
-import polarSync from "../../assets/polarsync.png";
-import bagOfHolding from "../../assets/bagofholding.png";
+import tomaBien from "../../assets/tomaBien.png";
+import polarSync from "../../assets/polarSync.png";
+import bagOfHolding from "../../assets/bagOfHolding.png";
 
 export default function Projects() {
   const projects = [
