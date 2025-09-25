@@ -49,16 +49,19 @@
   gap: 2rem;
 }
 
-.nav-section a {
+.nav-section a,
+.nav-section .nav-link {
   color: #bdaaff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   transition: color 0.2s;
   position: relative;
+  cursor: pointer;
 }
 
-.nav-section a::after {
+.nav-section a::after,
+.nav-section .nav-link::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -70,11 +73,13 @@
   transition: width 0.3s ease;
 }
 
-.nav-section a:hover {
+.nav-section a:hover,
+.nav-section .nav-link:hover {
   color: #7b3fe4;
 }
 
-.nav-section a:hover::after {
+.nav-section a:hover::after,
+.nav-section .nav-link:hover::after {
   width: 100%;
 }
 
@@ -98,13 +103,14 @@
     position: static;
     transform: none;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     text-align: center;
     justify-content: center;
   }
   
-  .nav-section a {
+  .nav-section a,
+  .nav-section .nav-link {
     font-size: 1.1rem;
   }
   
@@ -132,11 +138,23 @@
   }
   
   .nav-section {
-    gap: 0.8rem;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: baseline;
   }
   
-  .nav-section a {
-    font-size: 0.9rem;
+  .nav-section a,
+  .nav-section .nav-link {
+    font-size: 1.1rem;
+    display: inline-block;
+    line-height: 1.1;
+    padding-top: 1rem;
+    vertical-align: top;
   }
   
   .language-section-top {

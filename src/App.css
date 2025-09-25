@@ -38,3 +38,83 @@
 .read-the-docs {
   color: #888;
 }
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, #7b3fe4, #9d5ff5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(123, 63, 228, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scroll-to-top:focus {
+  outline: none !important;
+  box-shadow: 0 4px 20px rgba(123, 63, 228, 0.4);
+}
+
+.scroll-to-top:focus-visible {
+  outline: none !important;
+}
+
+.scroll-to-top svg {
+  transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background: linear-gradient(135deg, #bdaaff, #d4c5ff);
+  color: #2a003f;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(123, 63, 228, 0.6);
+}
+
+.scroll-to-top:hover svg {
+  transform: translateY(-2px);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 15px rgba(123, 63, 228, 0.4);
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    width: 58px;
+    height: 58px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .scroll-to-top svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 320px) {
+  .scroll-to-top {
+    width: 52px;
+    height: 52px;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  
+  .scroll-to-top svg {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,6 +1,7 @@
 import "./header.css";
 import logo from "../../assets/logo.png";
 import ReactCountryFlag from "react-country-flag";
+import { Link } from "react-scroll";
 
 export default function Header() {
   return (
@@ -15,9 +16,33 @@ export default function Header() {
           <img src={logo} alt="Logo MEYR FORGE" className="logo" />
         </div>
         <nav className="nav-section">
-          <a href="#about">Sobre nosotros</a>
-          <a href="#projects">Portfolio</a>
-          <a href="#contact">Contacto</a>
+          <Link 
+            to="about" 
+            smooth={true} 
+            duration={800} 
+            offset={-80}
+            className="nav-link"
+          >
+            Sobre nosotros
+          </Link>
+          <Link 
+            to="projects" 
+            smooth={true} 
+            duration={800} 
+            offset={10}
+            className="nav-link"
+          >
+            Portfolio
+          </Link>
+          <Link 
+            to="contact" 
+            smooth={true} 
+            duration={800} 
+            offset={0}
+            className="nav-link"
+          >
+            Contacto
+          </Link>
         </nav>
       </div>
     </header>
