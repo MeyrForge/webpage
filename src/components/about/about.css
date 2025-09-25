@@ -27,6 +27,11 @@
   margin: 0;
 }
 
+.about-content {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 @media (max-width: 768px) {
   .about {
     padding: 1rem 1rem;
@@ -35,6 +40,11 @@
   
   .about h2 {
     font-size: 1.5rem;
+  }
+  
+  .about-content {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
   
   .about p {
@@ -55,6 +65,11 @@
   .about h2 {
     font-size: 1.2rem;
     margin-bottom: 0.8rem;
+  }
+  
+  .about-content {
+    margin-left: 0;
+    margin-right: 0;
   }
   
   .about p {

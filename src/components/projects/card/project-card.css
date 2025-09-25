@@ -34,13 +34,13 @@
 
 .project-card h3 {
   color: #bdaaff;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
 
 .project-card p {
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
