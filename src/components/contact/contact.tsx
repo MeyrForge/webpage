@@ -1,9 +1,26 @@
 import "./contact.css";
-import { MdEmail } from "react-icons/md";
-import ailenImg from "../../assets/ailen.jpg";
+import PersonCard from "./card";
+import aylenImg from "../../assets/aylen.jpg";
 import lucianoImg from "../../assets/luciano.jpg";
 
 export default function Contact() {
+  const persons = [
+    {
+      id: 1,
+      name: "Aylen Aguino",
+      imageUrl: aylenImg,
+      email: "ailenaguino@gmail.com",
+      linkedinUrl: "https://www.linkedin.com/in/aylen-maria-aguino-350a98202/"
+    },
+    {
+      id: 2,
+      name: "Luciano de la Iglesia",
+      imageUrl: lucianoImg,
+      email: "l.delaiglesia@hotmail.com",
+      linkedinUrl: "https://www.linkedin.com/in/lucianodelaiglesia/"
+    }
+  ];
+
   return (
     <section className="contact" id="contact">
       <div className="contact-header-row">
@@ -15,26 +32,15 @@ export default function Contact() {
         </p>
       </div>
       <div className="contact-persons-row">
-        <div className="contact-person-card">
-          <a href="https://www.linkedin.com/in/aylen-maria-aguino-350a98202/" target="_blank" rel="noopener noreferrer" className="photo-link">
-            <img src={ailenImg} alt="Ailen Aguino" className="contact-photo" />
-          </a>
-          <div className="contact-person-name">Ailen Aguino</div>
-          <div className="contact-email">
-            <MdEmail style={{marginRight: '8px', fontSize: '20px', color: '#bdaaff'}} />
-            ailenaguino@gmail.com
-          </div>
-        </div>
-        <div className="contact-person-card">
-          <a href="https://www.linkedin.com/in/lucianodelaiglesia/" target="_blank" rel="noopener noreferrer" className="photo-link">
-            <img src={lucianoImg} alt="Luciano de la Iglesia" className="contact-photo" />
-          </a>
-          <div className="contact-person-name">Luciano de la Iglesia</div>
-          <div className="contact-email">
-            <MdEmail style={{marginRight: '8px', fontSize: '20px', color: '#bdaaff'}} />
-            l.delaiglesia@hotmail.com
-          </div>
-        </div>
+        {persons.map((person) => (
+          <PersonCard
+            key={person.id}
+            name={person.name}
+            imageUrl={person.imageUrl}
+            email={person.email}
+            linkedinUrl={person.linkedinUrl}
+          />
+        ))}
       </div>
     </section>
   );

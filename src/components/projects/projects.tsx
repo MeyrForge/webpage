@@ -9,21 +9,21 @@ export default function Projects() {
     {
       id: 1,
       title: "Toma Bien",
-      description: "Tu medicación, siempre a tiempo",
+      description: "Tu medicación, siempre a tiempo.",
       imageUrl: tomaBien,
       link: "https://github.com/MeyrForge/tomabien"
     },
     {
       id: 2,
       title: "Polar Sync",
-      description: "Monitorea, comprende, avanza",
+      description: "Monitorea, comprende, avanza.",
       imageUrl: polarSync,
       link: ""
     },
     {
       id: 3,
       title: "Bag of Holding - DM's Vault",
-      description: "Porque hasta el DM necesita su inventario",
+      description: "Porque hasta el DM necesita su inventario.",
       imageUrl: bagOfHolding,
       link: ""
     }
