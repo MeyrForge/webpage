@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useLanguage } from "../../contexts/language-context";
 import "./hero.css";
 
 export default function Hero() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { t } = useLanguage();
 
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded);
@@ -10,15 +12,13 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <span className="subtitle">SOMOS</span>
-        <h1 className="highlight">MEYR FORGE</h1>
+        <span className="subtitle">{t('heroSubtitle')}</span>
+        <h1 className="highlight">{t('heroTitle')}</h1>
         <p>
-          Transformamos ideas en aplicaciones móviles innovadoras. Cada proyecto es una oportunidad 
-          para aplicar lo que hemos aprendido en la vida y seguir creciendo como desarrolladores. 
-          Creamos soluciones útiles que conectan con las personas y mejoran su día a día.
+          {t('heroDescription')}
         </p>
         <div className="tech-stack">
-          <h3>Tecnologías que manejamos</h3>
+          <h3>{t('techStackTitle')}</h3>
           <div className={`tech-grid ${isExpanded ? 'expanded' : 'collapsed'}`}>
             <span className="tech-item">Android Studio</span>
             <span className="tech-item">Android SDK</span>
@@ -26,12 +26,12 @@ export default function Hero() {
             <span className="tech-item">Git</span>
             <span className="tech-item">SQL</span>
             <span className="tech-item">JetpackCompose</span>
-            <span className="tech-item">Inyección de dependencias (Dagger Hilt)</span>
+            <span className="tech-item">{t('techDependencyInjection')}</span>
             <span className="tech-item">Testing (JUnit 5)</span>
             <span className="tech-item">CI/CD (GitHub Actions)</span>
-            <span className="tech-item">Base de datos en dispositivo (Room)</span>
-            <span className="tech-item">Consumo de API REST (Retrofit2)</span>
-            <span className="tech-item">Manejo de imágenes (Coil)</span>
+            <span className="tech-item">{t('techOnDeviceDb')}</span>
+            <span className="tech-item">{t('techApiConsumption')}</span>
+            <span className="tech-item">{t('techImageHandling')}</span>
             <span className="tech-item">MVC</span>
             <span className="tech-item">MVVM</span>
             <span className="tech-item">Clean Architecture</span>

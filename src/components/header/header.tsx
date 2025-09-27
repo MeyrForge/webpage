@@ -1,15 +1,16 @@
 import "./header.css";
 import logo from "../../assets/logo.png";
-import ReactCountryFlag from "react-country-flag";
 import { Link } from "react-scroll";
+import { useLanguage } from "../../contexts/language-context";
+import LanguageSelector from "../language-selector/language-selector";
 
 export default function Header() {
+  const { t } = useLanguage();
+
   return (
     <header className="header">
       <div className="language-section-top">
-        <ReactCountryFlag countryCode="ES" svg style={{ width: '20px', height: '15px', marginRight: '8px' }} />
-        <span style={{ margin: '0 4px' }}>|</span>
-        <ReactCountryFlag countryCode="GB" svg style={{ width: '20px', height: '15px', marginLeft: '8px' }} />
+        <LanguageSelector />
       </div>
       <div className="header-container">
         <div className="logo-section">
@@ -23,7 +24,7 @@ export default function Header() {
             offset={-80}
             className="nav-link"
           >
-            Sobre nosotros
+            {t('about')}
           </Link>
           <Link 
             to="projects" 
@@ -32,7 +33,7 @@ export default function Header() {
             offset={10}
             className="nav-link"
           >
-            Portfolio
+            {t('portfolio')}
           </Link>
           <Link 
             to="contact" 
@@ -41,7 +42,7 @@ export default function Header() {
             offset={0}
             className="nav-link"
           >
-            Contacto
+            {t('contact')}
           </Link>
         </nav>
       </div>

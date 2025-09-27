@@ -1,9 +1,12 @@
+import { useLanguage } from "../../contexts/language-context";
 import "./contact.css";
 import PersonCard from "./card";
 import aylenImg from "../../assets/aylen.jpg";
 import lucianoImg from "../../assets/luciano.jpg";
 
 export default function Contact() {
+  const { t } = useLanguage();
+  
   const persons = [
     {
       id: 1,
@@ -24,11 +27,9 @@ export default function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="contact-header-row">
-        <h2 className="contact-title">¡Contáctanos!</h2>
+        <h2 className="contact-title">{t('contactTitle')}</h2>
         <p className="contact-description">
-          Somos desarrolladores móviles con sólidos conocimientos técnicos y ganas de seguir creciendo. 
-          Si tu empresa busca talentos comprometidos que aporten frescura y entusiasmo a sus proyectos, 
-          nos encantaría formar parte de tu equipo y contribuir con nuestras habilidades.
+          {t('contactDescription')}
         </p>
       </div>
       <div className="contact-persons-row">

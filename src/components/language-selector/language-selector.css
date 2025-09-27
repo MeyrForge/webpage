@@ -1,0 +1,50 @@
+.language-selector {
+  display: flex;
+  align-items: center;
+  font-size: 0;
+}
+
+.flag-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.flag-container .flag {
+  transition: opacity 0.3s ease;
+  opacity: 0.6;
+  display: block;
+}
+
+.flag-container:hover .flag {
+  opacity: 0.8;
+}
+
+.flag-container .flag.active {
+  opacity: 1;
+}
+
+.flag-underline {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #7b3fe4;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.flag-container:hover .flag-underline {
+  width: 100%;
+}
+
+.flag-underline.active {
+  width: 100%;
+}
+
+.separator {
+  margin: 0 8px;
+  color: inherit;
+  font-size: 0.8rem;
+}
