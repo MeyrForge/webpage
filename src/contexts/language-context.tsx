@@ -12,7 +12,12 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('es');
+  const getInitialLanguage = (): Language => {
+    const browserLanguage = navigator.language.toLowerCase();
+    return browserLanguage.startsWith('es') ? 'es' : 'en';
+  };
+
+  const [language, setLanguage] = useState<Language>(getInitialLanguage());
 
   const t = (key: TranslationKey): string => {
     return translations[language][key] || key;
